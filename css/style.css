@@ -193,7 +193,7 @@ body {
 }
 
 .slide-menu__list::-webkit-scrollbar {
-  width: 0;
+  background-color: #f8f8f8;
 }
 
 .slide-menu__list-item {
