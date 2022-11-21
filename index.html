@@ -8,87 +8,99 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="menu menu--hidden">
+    <header class="menu">
       <div class="menu__important">
-        <input type="button" class="menu__ic-menu menu__ic-box" />
-        <a class="menu__logo" href="#">
-          <img src="/img/header/logo.svg" alt="Логотип" />
-        </a>
-      </div>
-      <div class="menu__message hidden">
-        <input type="button" class="menu__ic-call menu__ic-box" />
-        <input type="button" class="menu__ic-chat menu__ic-box" />
-        <input type="button" class="menu__ic-profile menu__ic-box" />
-      </div>
-      <div class="menu__order">
-        <input type="button" class="menu__ic-repair menu__ic-box" />
-        <input type="button" class="menu__ic-checkstatus menu__ic-box" />
-      </div>
-    </header>
-    <main class="main">
-      <div class="main-title">
-        <h1 class="main-title__title">Услуги и сервисы</h1>
-        <div class="menu__order menu__order--hidden">
-          <label class="menu__label-for-btn">
-            Оставить заявку
-            <input type="button" class="menu__ic-repair menu__ic-box" />
-          </label>
-          <label class="menu__label-for-btn">
-            Статус ремонта
-            <input type="button" class="menu__ic-checkstatus menu__ic-box" />
-          </label>
+        <button class="menu__ic-box ic-menu">
+          <img src="/img/header/ic-menu.svg" alt="Меню">
+        </button>
+        <div class="logo">
+          <a class="logo__link" href="#">
+            <img src="/img/header/logo.svg" alt="Логотип" />
+          </a>
         </div>
       </div>
-      <section class="slide-menu">
+      <ul class="menu__message">
+        <li>
+          <button class="menu__ic-box ic-call">
+            <img src="/img/header/ic-call.svg" alt="Звонок">
+          </button>
+        </li>
+        <li>
+          <button class="menu__ic-box ic-chat">
+            <img src="/img/header/ic-chat.svg" alt="Чат">
+          </button>
+        </li>
+        <li>
+          <button class="menu__ic-box ic-profile">
+            <img src="/img/header/ic-profile.svg" alt="Профиль">
+          </button>
+        </li>
+      </ul>
+      <ul class="menu__order">
+        <li class="ic-with-text">
+          <a href="#" class="ic-with-text__text">Оставить заявку</a>
+            <button class="menu__ic-box">
+              <img src="/img/header/ic-repair.svg" alt="Оставить заявку">
+            </button>
+        </li>
+        <li class="ic-with-text">
+          <a href="#" class="ic-with-text__text">Статус ремонта</a>
+            <button class="menu__ic-box">
+              <img src="/img/header/ic-checkstatus.svg" alt="Статус ремонта">
+            </button>
+        </li>
+      </ul>
+    </header>
+    <h1 class="title">Услуги и сервисы</h1>
+    <main class="main">
+      <nav class="slide-menu">
         <ul class="slide-menu__list">
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Ремонтируемые устройства </a>
+            <a class="slide-menu__text" href="#"> Ремонтируемые устройства </a>
           </li>
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Дополнительные услуги </a>
+            <a class="slide-menu__text" href="#"> Дополнительные услуги </a>
           </li>
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Цены на услуги </a>
+            <a class="slide-menu__text" href="#"> Цены на услуги </a>
           </li>
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Адреса сервисных центров </a>
+            <a class="slide-menu__text" href="#"> Адреса сервисных центров </a>
           </li>
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Специальные цены </a>
+            <a class="slide-menu__text" href="#"> Специальные цены </a>
           </li>
           <li class="slide-menu__list-item">
-            <a class="slide-menu_text" href="#"> Отзывы </a>
+            <a class="slide-menu__text" href="#"> Отзывы </a>
           </li>
         </ul>
-      </section>
+      </nav>
       <section class="about">
         <div class="about-content">
-          <p class="about-text">
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-          </p>
-          <p class="about-text about-text--hidden">
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера<span class="about-text__part-of-text hidden">
-              , что подтверждает большое количество постоянных клиентов. Мы
-              гордимся тем, что к нам обращаются по рекомендациям и, в свою
-              очередь, советуют нас родным и близким.</span
-            >
-          </p>
+          <div class="about-text">
+            <p>
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+            </p>
+            <p>
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов. 
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+                очередь, советуют нас родным и близким.
+            </p>
+          </div>
           <div class="about-button">
-            <input
-              type="button"
-              value="Читать далее"
-              class="about-button__btn"
-            />
+            <button class="about-button__btn">Читать далее</button>
           </div>
         </div>
-        <img
-          src="/img/about/about__picture.jpg"
-          alt="Фото компании"
-          class="about__picture"
-        />
+        <div class="about-picture-container">
+          <img
+            src="/img/about/about__picture.jpg"
+            alt="Фото компании"
+            class="about__picture"
+          />
+        </div>
       </section>
     </main>
   </body>
