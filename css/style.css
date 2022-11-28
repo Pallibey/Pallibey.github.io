@@ -64,10 +64,6 @@ body {
 .hidden {
   display: none;
 }
-
-.about-text--hidden {
-  display: none;
-}
 /*-----Шапка-----*/
 
 .menu {
@@ -185,6 +181,11 @@ body {
 
 /*-----Основное содержание-----*/
 
+.main {
+  display: flex;
+  flex-direction: column;
+}
+
 .title {
   display: block;
   line-height: 40px;
@@ -239,6 +240,10 @@ body {
   border-radius: 6px;
 }
 
+.container {
+  max-width: 1120px;
+}
+
 .about {
   display: flex;
   flex-direction: column;
@@ -246,7 +251,7 @@ body {
 }
 
 .about-text {
-  height: 90px;
+  height: 85px;
   overflow: hidden;
   margin-left: 1.2em;
   margin-right: 1.2em;
@@ -290,23 +295,32 @@ body {
   width: 100%;
 }
 
+.about__picture {
+  object-fit: contain;
+}
+
 @media (min-width: 720px) {
   .about {
     flex-direction: row;
   }
 
-  .about-content {
-    height: 160px;
+  .about-text {
+    height: 120px;
   }
 
   .about__picture {
     height: 20vmax;
+    max-height: 250px;
     border-radius: 6px;
   }
 }
 
 @media (min-width: 1024px) {
-  .about-text__part-of-text {
-    display: inline;
+  .container {
+    align-self: center;
+  }
+
+  .about-text {
+    height: 180px;
   }
 }
