@@ -1,1 +1,1 @@
-[Сайт](pallibey.github.io)
+[Сайт макета](pallibey.github.io)
