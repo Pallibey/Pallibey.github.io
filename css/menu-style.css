@@ -1,0 +1,99 @@
+body {
+    width: 320px;
+    height: 1024px;
+    float: left;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-bottom: 32px;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.menu {
+    border: none;
+}
+
+.menu__close {
+    margin-right: 1.1em;
+}
+
+.categories__list {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 26px
+}
+
+.categories__list-item {
+    font-weight: 300;
+    
+}
+
+.categories__link {
+    display: block;
+    padding: 4px;
+}
+
+.categories__link:hover, .lang__option:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+
+.active-link, .active-lang {
+    position: relative;
+    opacity: 0.7;
+}
+
+.active-link::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: -23px;
+  background-image: url(/img/header/highlight.svg);
+  height: 32px;
+  width: 4px;
+}
+
+.contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.menu__message {
+    display: flex;
+    gap: 1em;
+}
+
+.mail {
+    font-weight: 300;
+}
+
+.phone {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.lang {
+    display: flex;
+    margin-top: 40px;
+    gap: 1em;
+}
+
+.lang__option {
+    font-weight: 300;
+}
