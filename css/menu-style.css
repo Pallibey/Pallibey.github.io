@@ -1,40 +1,44 @@
 body {
-    width: 320px;
-    height: 1024px;
-    float: left;
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
 
 }
 
-.container {
+.menu-container {
+    position: fixed;
+    left: 0;
+    width: 320px;
+    height: 100vh;
     background-color: white;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-bottom: 32px;
-}
+    padding: 18px 24px 30px 24px;
+    box-shadow: 16px 0px 52px 0px #0E185033,
+                -2px 0px 4px 0px #454F7E05;
 
-.footer {
-    margin-top: auto;
 }
 
 .menu {
     border: none;
+    display: flex;
+    gap: 1.1em;
 }
 
-.menu__close {
-    margin-right: 1.1em;
+.menu__item {
+    display: block;
+}
+
+.categories {
+    flex-grow: 1;
 }
 
 .categories__list {
     margin-top: 26px;
     display: flex;
     flex-direction: column;
-    gap: 26px
+    gap: 24px;
+    padding-bottom: 24px;
 }
 
 .categories__list-item {
@@ -43,11 +47,16 @@ body {
 }
 
 .categories__link {
+    position: relative;
     display: block;
     padding: 4px;
 }
 
-.categories__link:hover, .lang__option:hover {
+.menu__ic, .categories__link, .lang__option {
+    transition-duration: 0.5s;
+}
+
+.categories__link:hover, .lang__option:hover, .menu__ic:hover {
     cursor: pointer;
     opacity: 0.7;
     transition-duration: 0.5s;
@@ -58,14 +67,27 @@ body {
     opacity: 0.7;
 }
 
-.active-link::before {
+.active-link::before, .categories__link::before {
   content: " ";
   position: absolute;
   top: 0;
-  left: -23px;
-  background-image: url(/img/header/highlight.svg);
+  left: -25px;
   height: 32px;
-  width: 4px;
+  width: 1px;
+  border-right: 4px solid #41f6d7;
+  border-radius: 3px;
+  opacity: 0;
+}
+
+.active-link::before, .categories__link:hover::before {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+.menu-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
 }
 
 .contacts {
@@ -90,7 +112,6 @@ body {
 
 .lang {
     display: flex;
-    margin-top: 40px;
     gap: 1em;
 }
 

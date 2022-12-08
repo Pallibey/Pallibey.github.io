@@ -37,6 +37,7 @@ dd, ol, ul, li, article, aside, footer, header, nav {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 article, aside, footer, header, nav, section {
