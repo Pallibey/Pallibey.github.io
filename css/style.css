@@ -80,6 +80,10 @@ body {
   margin: 0 auto;
 }
 
+.max-height-for-block {
+  height: auto !important;
+}
+
 /*-----Шапка-----*/
 
 .menu {
@@ -154,6 +158,26 @@ body {
   display: none;
 }
 
+.title-container {
+  margin-top: 1em;
+  margin-bottom: 0.8em;
+}
+
+.title {
+  line-height: 40px;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: -0.6px;
+}
+
+.title::before {
+  content: " ";
+  margin-right: 0.8em;
+  height: 40px;
+  border-right: 3px solid #41f6d7;
+  border-radius: 2px;
+}
+
 @media (min-width: 720px) {
   body {
     font-size: 16px;
@@ -205,26 +229,6 @@ body {
   flex-direction: column;
 }
 
-.title-container {
-  margin-top: 1em;
-  margin-bottom: 0.8em;
-}
-
-.title {
-  line-height: 40px;
-  font-size: 2em;
-  font-weight: bold;
-  letter-spacing: -0.6px;
-}
-
-.title::before {
-  content: " ";
-  margin-right: 0.8em;
-  height: 40px;
-  border-right: 3px solid #41f6d7;
-  border-radius: 2px;
-}
-
 .slide-menu {
   box-sizing: border-box;
 }
@@ -260,10 +264,12 @@ body {
   border-radius: 6px;
 }
 
+/*-----Секция "О компании"-----*/
+
 .about {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:flex-start;
 }
 
 .about__content {
@@ -284,7 +290,7 @@ body {
   text-align: justify;
 }
 
-.about__button {
+.button-read-more {
   display: flex;
   gap: 0.8em;
   border: none;
@@ -296,8 +302,12 @@ body {
   letter-spacing: -0.2px;
 }
 
-.about__button:hover {
+.button-read-more:hover {
   cursor: pointer;
+}
+
+.button-read-more .img-rotate {
+  transform: rotate(180deg);
 }
 
 .about__picture-container {
@@ -311,6 +321,67 @@ body {
   object-fit: contain;
 }
 
+/*-----Секция "Ремонтируемые бренды"-----*/
+
+.brands-title-container {
+  height: 80px;
+  border-top: 1px solid #D9FFF5;
+  background: linear-gradient(90deg, #F8F8F8 0%, #FFFFFF 98.61%);
+}
+
+.brands-title {
+  padding: 1.2em;
+}
+
+.section-title {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  color: #7E7E82;
+  letter-spacing: -0.2px;
+}
+
+.brands-list {
+  display: flex;
+  gap: 1.2em;
+  padding: 1.2em;
+  padding-bottom: 2.5em;
+}
+
+.swiper .swiper-slide {
+  width: auto;
+}
+
+.brands-item__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 240px;
+  height: 82px;
+  background-color: white;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.brands-item__button {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #FF3E79;
+  border-radius: 20px;
+}
+
+span.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #B5B6BC;
+}
+
+.brands__button {
+  display: none;
+  padding: 0.8em 0 1em 1.2em;
+}
+
+
 @media (min-width: 720px) {
   .about {
     flex-direction: row;
@@ -319,6 +390,8 @@ body {
   .about__content {
     margin-right: 0;
     margin-left: 1.6em;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
   }
 
   .about__text {
@@ -333,6 +406,24 @@ body {
   .about__picture {
     border-radius: 6px;
   }
+
+  div.swiper-slide {
+    height: 82px;
+  }
+
+  div.brands-list {
+    padding: 1.2em 0;
+    justify-content:space-around;
+    flex-wrap: wrap;
+  }
+
+  div.swiper {
+    height: 210px;
+  }
+
+  .brands__button {
+    display: block;
+  }
 }
 
 @media (min-width: 1120px) {
@@ -346,13 +437,21 @@ body {
     overflow:hidden;
   }
 
+  .about__content {
+    margin-top: 3em;
+  }
+
   .about__text {
-    height: 160px;
+    height: auto;
   }
 
   .about__picture-container {
     margin-right: 0;
     margin-left: 2em;
     height: 280px;
+  }
+
+  div.swiper {
+    height: auto;
   }
 }

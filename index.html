@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CPS</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <div class="container">
+
+      <!-- Шапка сайта -->
+
       <header class="header">
         <ul class="menu">
           <li class="menu__first-ic">
@@ -58,10 +65,16 @@
             </button>
           </li>
         </ul>
+
+        <!-- Заголовок страницы -->
+
         <div class="title-container">
           <h1 class="title">Услуги и сервисы</h1>
         </div>
       </header>
+
+      <!-- Навигационное меню -->
+
       <nav class="slide-menu">
         <ul class="slide-menu__list">
           <li class="slide-menu__list-item">
@@ -85,6 +98,9 @@
         </ul>
       </nav>
       <main class="main">
+
+        <!-- Секция "О компании" -->
+
         <section class="about">
           <div class="about__content">
             <div class="about__text">
@@ -100,22 +116,180 @@
                 и, в свою очередь, советуют нас родным и близким.
               </p>
             </div>
-            <button class="about__button">
-              <span
-                ><img src="/img/main/about__button.svg" alt="Читать далее"
-              /></span>
-              <span>Читать далее</span>
+            <button class="about__button button-read-more">
+              <span class="img">
+                <img
+                  src="/img/main/about/about__button.svg"
+                  alt="Читать далее"/>
+                </span>
+              <span class="text">Читать далее</span>
             </button>
           </div>
           <div class="about__picture-container">
             <img
-              src="/img/about/about__picture.jpg"
+              src="/img/main/about/about__picture.jpg"
               alt="Фото компании"
               class="about__picture"
             />
           </div>
         </section>
+
+        <!-- Секция "Ремонтируемые бренды" -->
+
+        <section class="brands">
+          <div class="brands-title-container">
+            <h2 class="brands-title section-title">
+              Ремонт техники различных брендов
+            </h2>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper brands-list">
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Lenovo.svg"
+                    alt="Lenovo"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Bosch.svg"
+                    alt="Bosch"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Samsung.svg"
+                    alt="Samsung"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/HP.svg"
+                    alt="HP"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Apple.svg"
+                    alt="Apple"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Acer.svg"
+                    alt="Acer"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/ViewSonic.svg"
+                    alt="ViewSonic"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="#" class="brands-item__link">
+                  <img
+                    src="img/main/brands/Sony.svg"
+                    alt="Sony"
+                    class="brands-item__img"
+                  />
+                  <button class="brands-item__button">
+                    <img
+                      src="img/main/brands/button-ic.svg"
+                      alt="Перейти"
+                      class="brands-item__button-img"
+                    />
+                  </button>
+                </a>
+              </div>
+            </div>
+          <div class="swiper-pagination"></div>
+          </div>
+          <div class="brands__button">
+            <button class="button-read-more">
+            <span class="img"
+              ><img 
+                src="/img/main/about/about__button.svg"
+                alt="Показать все"
+            /></span>
+            <span class="text">Показать все</span>
+          </button>
+          </div>
+        </section>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="swiper.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
